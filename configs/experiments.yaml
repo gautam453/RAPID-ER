@@ -1,0 +1,22 @@
+experiments:
+  E1: "TCGA internal nested 5-fold cross-validation across all models"
+  E2: "Frozen-model external validation on GSE96058 (RNA-seq, n=3,273)"
+  E3: "Frozen-model external validation on GSE42568 (Affymetrix GPL570 microarray, n=104)"
+  E4: "Comparison of frozen training normalization vs label-free rank normalization"
+  E5: "Gene selection stability across resamples and cross-validation folds"
+  E6: "Comparison with ESR1-only baseline and ESR1-exclusion ablation"
+  E7: "Ablations: feature selection threshold, dropout rates, gene counts (50, 100, 200, 300)"
+  E8: "Calibration analysis (Brier score, calibration slope, intercept, ECE)"
+  E9: "Uncertainty and coverage-error analysis under confidence thresholds"
+
+metrics:
+  - "AUROC"
+  - "AUPRC"
+  - "Sensitivity"
+  - "Specificity"
+  - "F1"
+  - "MCC"
+  - "Brier_Score"
+  - "Calibration_Slope"
+  - "Calibration_Intercept"
+  - "ECE"

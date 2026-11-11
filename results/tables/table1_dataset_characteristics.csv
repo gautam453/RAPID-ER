@@ -1,0 +1,4 @@
+Cohort,Role,Platform,Raw Samples,Excluded,Eligible Patients,ER-Positive,ER-Negative,ER-Positive (%)
+TCGA-BRCA,Primary Training & Internal-CV,Illumina HiSeq (STAR Counts),1111,67,1044,807,237,77.3%
+GSE96058,External RNA-seq,Illumina HiSeq (transformed),3409,336,3073,2832,241,92.2%
+GSE42568,External Microarray,Affymetrix HG-U133_Plus_2 (GPL570),121,20,101,67,34,66.3%

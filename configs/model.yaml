@@ -1,0 +1,56 @@
+random_seed: 42
+n_folds: 5
+
+ss_mlp:
+  stability_selection:
+    n_resamples: 100
+    subsample_ratio: 0.8
+    l1_ratio: 0.5
+    selection_frequency_threshold: 0.70
+    max_genes: 300
+  architecture:
+    hidden_dim1: 256
+    dropout1: 0.35
+    hidden_dim2: 64
+    dropout2: 0.25
+    output_dim: 1
+    activation: "GELU"
+  training:
+    learning_rate: 0.0005
+    weight_decay: 0.001
+    batch_size: 32
+    max_epochs: 100
+    early_stopping_patience: 12
+    optimizer: "AdamW"
+    loss: "weighted_bce"
+    precision: "fp32"
+
+baselines:
+  esr1_logistic:
+    penalty: "l2"
+    C: 1.0
+  logistic_regression:
+    penalty: "l2"
+    C: 1.0
+  elastic_net:
+    penalty: "elasticnet"
+    solver: "saga"
+    l1_ratio: 0.5
+    C: 0.1
+  svm_linear:
+    C: 1.0
+    kernel: "linear"
+  svm_rbf:
+    C: 1.0
+    gamma: "scale"
+    kernel: "rbf"
+  random_forest:
+    n_estimators: 300
+    max_depth: 8
+    random_state: 42
+  xgboost:
+    n_estimators: 300
+    learning_rate: 0.05
+    max_depth: 4
+    subsample: 0.8
+    colsample_bytree: 0.8

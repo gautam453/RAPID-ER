@@ -1,0 +1,424 @@
+cohort,sample_id,patient_id,reason
+TCGA-BRCA,TCGA-A7-A0CH-01A,TCGA-A7-A0CH,"Missing, equivocal or indeterminate ER status ([Not Evaluated])"
+TCGA-BRCA,TCGA-A7-A0DB-01A,TCGA-A7-A0DB,Duplicate primary tumour sample for patient (retained primary vial A)
+TCGA-BRCA,TCGA-A7-A0DB-01C,TCGA-A7-A0DB,Duplicate primary tumour sample for patient (retained primary vial A)
+TCGA-BRCA,TCGA-A7-A0DC-01B,TCGA-A7-A0DC,Duplicate primary tumour sample for patient (retained primary vial A)
+TCGA-BRCA,TCGA-A7-A13D-01A,TCGA-A7-A13D,Duplicate primary tumour sample for patient (retained primary vial A)
+TCGA-BRCA,TCGA-A7-A13D-01B,TCGA-A7-A13D,Duplicate primary tumour sample for patient (retained primary vial A)
+TCGA-BRCA,TCGA-A7-A13E-01A,TCGA-A7-A13E,Duplicate primary tumour sample for patient (retained primary vial A)
+TCGA-BRCA,TCGA-A7-A13E-01B,TCGA-A7-A13E,Duplicate primary tumour sample for patient (retained primary vial A)
+TCGA-BRCA,TCGA-A7-A13G-01B,TCGA-A7-A13G,Duplicate primary tumour sample for patient (retained primary vial A)
+TCGA-BRCA,TCGA-A7-A26E-01A,TCGA-A7-A26E,Duplicate primary tumour sample for patient (retained primary vial A)
+TCGA-BRCA,TCGA-A7-A26E-01B,TCGA-A7-A26E,Duplicate primary tumour sample for patient (retained primary vial A)
+TCGA-BRCA,TCGA-A7-A26F-01B,TCGA-A7-A26F,Duplicate primary tumour sample for patient (retained primary vial A)
+TCGA-BRCA,TCGA-A7-A26I-01B,TCGA-A7-A26I,Duplicate primary tumour sample for patient (retained primary vial A)
+TCGA-BRCA,TCGA-A7-A26J-01A,TCGA-A7-A26J,Duplicate primary tumour sample for patient (retained primary vial A)
+TCGA-BRCA,TCGA-A7-A26J-01B,TCGA-A7-A26J,Duplicate primary tumour sample for patient (retained primary vial A)
+TCGA-BRCA,TCGA-AC-A2FM-01A,TCGA-AC-A2FM,"Missing, equivocal or indeterminate ER status ([Not Evaluated])"
+TCGA-BRCA,TCGA-AC-A2QH-01B,TCGA-AC-A2QH,Duplicate primary tumour sample for patient (retained primary vial A)
+TCGA-BRCA,TCGA-AC-A3OD-01B,TCGA-AC-A3OD,Duplicate primary tumour sample for patient (retained primary vial A)
+TCGA-BRCA,TCGA-B6-A0I2-01A,TCGA-B6-A0I2,"Missing, equivocal or indeterminate ER status ([Not Evaluated])"
+TCGA-BRCA,TCGA-B6-A0I8-01A,TCGA-B6-A0I8,"Missing, equivocal or indeterminate ER status ([Not Evaluated])"
+TCGA-BRCA,TCGA-B6-A0I9-01A,TCGA-B6-A0I9,"Missing, equivocal or indeterminate ER status (Indeterminate)"
+TCGA-BRCA,TCGA-BH-A0B2-01A,TCGA-BH-A0B2,No matching clinical patient record found
+TCGA-BRCA,TCGA-BH-A18R-01A,TCGA-BH-A18R,"Missing, equivocal or indeterminate ER status (Indeterminate)"
+TCGA-BRCA,TCGA-BH-A203-01A,TCGA-BH-A203,"Missing, equivocal or indeterminate ER status ([Not Evaluated])"
+TCGA-BRCA,TCGA-BH-A204-01A,TCGA-BH-A204,"Missing, equivocal or indeterminate ER status ([Not Evaluated])"
+TCGA-BRCA,TCGA-BH-A208-01A,TCGA-BH-A208,"Missing, equivocal or indeterminate ER status ([Not Evaluated])"
+TCGA-BRCA,TCGA-C8-A12K-01A,TCGA-C8-A12K,"Missing, equivocal or indeterminate ER status ([Not Evaluated])"
+TCGA-BRCA,TCGA-C8-A12Y-01A,TCGA-C8-A12Y,"Missing, equivocal or indeterminate ER status ([Not Evaluated])"
+TCGA-BRCA,TCGA-C8-A275-01A,TCGA-C8-A275,"Missing, equivocal or indeterminate ER status ([Not Evaluated])"
+TCGA-BRCA,TCGA-C8-A8HR-01A,TCGA-C8-A8HR,"Missing, equivocal or indeterminate ER status ([Not Evaluated])"
+TCGA-BRCA,TCGA-E9-A1N3-01A,TCGA-E9-A1N3,"Missing, equivocal or indeterminate ER status ([Not Evaluated])"
+TCGA-BRCA,TCGA-E9-A1QZ-01A,TCGA-E9-A1QZ,"Missing, equivocal or indeterminate ER status ([Not Evaluated])"
+TCGA-BRCA,TCGA-E9-A1R0-01A,TCGA-E9-A1R0,"Missing, equivocal or indeterminate ER status ([Not Evaluated])"
+TCGA-BRCA,TCGA-E9-A1R3-01A,TCGA-E9-A1R3,"Missing, equivocal or indeterminate ER status ([Not Evaluated])"
+TCGA-BRCA,TCGA-E9-A1R4-01A,TCGA-E9-A1R4,"Missing, equivocal or indeterminate ER status ([Not Evaluated])"
+TCGA-BRCA,TCGA-E9-A1R5-01A,TCGA-E9-A1R5,"Missing, equivocal or indeterminate ER status ([Not Evaluated])"
+TCGA-BRCA,TCGA-E9-A1R6-01A,TCGA-E9-A1R6,"Missing, equivocal or indeterminate ER status ([Not Evaluated])"
+TCGA-BRCA,TCGA-E9-A1R7-01A,TCGA-E9-A1R7,"Missing, equivocal or indeterminate ER status ([Not Evaluated])"
+TCGA-BRCA,TCGA-E9-A1RA-01A,TCGA-E9-A1RA,"Missing, equivocal or indeterminate ER status ([Not Evaluated])"
+TCGA-BRCA,TCGA-E9-A1RB-01A,TCGA-E9-A1RB,"Missing, equivocal or indeterminate ER status ([Not Evaluated])"
+TCGA-BRCA,TCGA-E9-A1RC-01A,TCGA-E9-A1RC,"Missing, equivocal or indeterminate ER status ([Not Evaluated])"
+TCGA-BRCA,TCGA-E9-A1RD-01A,TCGA-E9-A1RD,"Missing, equivocal or indeterminate ER status ([Not Evaluated])"
+TCGA-BRCA,TCGA-E9-A1RE-01A,TCGA-E9-A1RE,"Missing, equivocal or indeterminate ER status ([Not Evaluated])"
+TCGA-BRCA,TCGA-E9-A1RF-01A,TCGA-E9-A1RF,"Missing, equivocal or indeterminate ER status ([Not Evaluated])"
+TCGA-BRCA,TCGA-E9-A1RG-01A,TCGA-E9-A1RG,"Missing, equivocal or indeterminate ER status ([Not Evaluated])"
+TCGA-BRCA,TCGA-E9-A1RH-01A,TCGA-E9-A1RH,"Missing, equivocal or indeterminate ER status ([Not Evaluated])"
+TCGA-BRCA,TCGA-E9-A1RI-01A,TCGA-E9-A1RI,"Missing, equivocal or indeterminate ER status ([Not Evaluated])"
+TCGA-BRCA,TCGA-E9-A226-01A,TCGA-E9-A226,"Missing, equivocal or indeterminate ER status ([Not Evaluated])"
+TCGA-BRCA,TCGA-E9-A228-01A,TCGA-E9-A228,"Missing, equivocal or indeterminate ER status ([Not Evaluated])"
+TCGA-BRCA,TCGA-E9-A229-01A,TCGA-E9-A229,"Missing, equivocal or indeterminate ER status ([Not Evaluated])"
+TCGA-BRCA,TCGA-E9-A243-01A,TCGA-E9-A243,"Missing, equivocal or indeterminate ER status ([Not Evaluated])"
+TCGA-BRCA,TCGA-E9-A244-01A,TCGA-E9-A244,"Missing, equivocal or indeterminate ER status ([Not Evaluated])"
+TCGA-BRCA,TCGA-E9-A245-01A,TCGA-E9-A245,"Missing, equivocal or indeterminate ER status ([Not Evaluated])"
+TCGA-BRCA,TCGA-E9-A247-01A,TCGA-E9-A247,"Missing, equivocal or indeterminate ER status ([Not Evaluated])"
+TCGA-BRCA,TCGA-E9-A248-01A,TCGA-E9-A248,"Missing, equivocal or indeterminate ER status ([Not Evaluated])"
+TCGA-BRCA,TCGA-E9-A249-01A,TCGA-E9-A249,"Missing, equivocal or indeterminate ER status ([Not Evaluated])"
+TCGA-BRCA,TCGA-E9-A24A-01A,TCGA-E9-A24A,"Missing, equivocal or indeterminate ER status ([Not Evaluated])"
+TCGA-BRCA,TCGA-E9-A2JS-01A,TCGA-E9-A2JS,"Missing, equivocal or indeterminate ER status ([Not Evaluated])"
+TCGA-BRCA,TCGA-E9-A2JT-01A,TCGA-E9-A2JT,"Missing, equivocal or indeterminate ER status ([Not Evaluated])"
+TCGA-BRCA,TCGA-E9-A3HO-01A,TCGA-E9-A3HO,"Missing, equivocal or indeterminate ER status ([Not Evaluated])"
+TCGA-BRCA,TCGA-E9-A3QA-01A,TCGA-E9-A3QA,"Missing, equivocal or indeterminate ER status ([Not Evaluated])"
+TCGA-BRCA,TCGA-E9-A5UO-01A,TCGA-E9-A5UO,"Missing, equivocal or indeterminate ER status ([Not Evaluated])"
+TCGA-BRCA,TCGA-E9-A5UP-01A,TCGA-E9-A5UP,"Missing, equivocal or indeterminate ER status ([Not Evaluated])"
+TCGA-BRCA,TCGA-PL-A8LV-01A,TCGA-PL-A8LV,"Missing, equivocal or indeterminate ER status ([Not Evaluated])"
+TCGA-BRCA,TCGA-PL-A8LX-01A,TCGA-PL-A8LX,"Missing, equivocal or indeterminate ER status ([Not Evaluated])"
+TCGA-BRCA,TCGA-PL-A8LY-01A,TCGA-PL-A8LY,"Missing, equivocal or indeterminate ER status ([Not Evaluated])"
+TCGA-BRCA,TCGA-PL-A8LZ-01A,TCGA-PL-A8LZ,"Missing, equivocal or indeterminate ER status ([Not Evaluated])"
+GSE42568,GSM1045191,GSM1045191,Normal breast tissue (non-tumour)
+GSE42568,GSM1045192,GSM1045192,Normal breast tissue (non-tumour)
+GSE42568,GSM1045193,GSM1045193,Normal breast tissue (non-tumour)
+GSE42568,GSM1045194,GSM1045194,Normal breast tissue (non-tumour)
+GSE42568,GSM1045195,GSM1045195,Normal breast tissue (non-tumour)
+GSE42568,GSM1045196,GSM1045196,Normal breast tissue (non-tumour)
+GSE42568,GSM1045197,GSM1045197,Normal breast tissue (non-tumour)
+GSE42568,GSM1045198,GSM1045198,Normal breast tissue (non-tumour)
+GSE42568,GSM1045199,GSM1045199,Normal breast tissue (non-tumour)
+GSE42568,GSM1045200,GSM1045200,Normal breast tissue (non-tumour)
+GSE42568,GSM1045201,GSM1045201,Normal breast tissue (non-tumour)
+GSE42568,GSM1045202,GSM1045202,Normal breast tissue (non-tumour)
+GSE42568,GSM1045203,GSM1045203,Normal breast tissue (non-tumour)
+GSE42568,GSM1045204,GSM1045204,Normal breast tissue (non-tumour)
+GSE42568,GSM1045205,GSM1045205,Normal breast tissue (non-tumour)
+GSE42568,GSM1045206,GSM1045206,Normal breast tissue (non-tumour)
+GSE42568,GSM1045207,GSM1045207,Normal breast tissue (non-tumour)
+GSE42568,GSM1045250,GSM1045250,Missing or unknown ER status (NA)
+GSE42568,GSM1045275,GSM1045275,Missing or unknown ER status (NA)
+GSE42568,GSM1045308,GSM1045308,Missing or unknown ER status (NA)
+GSE96058,GSM2528079,F1,Missing or unknown ER status (NA)
+GSE96058,GSM2528084,F6,Missing or unknown ER status (NA)
+GSE96058,GSM2528093,F15,Missing or unknown ER status (NA)
+GSE96058,GSM2528094,F16,Missing or unknown ER status (NA)
+GSE96058,GSM2528105,F27,Missing or unknown ER status (NA)
+GSE96058,GSM2528106,F28,Missing or unknown ER status (NA)
+GSE96058,GSM2528107,F29,Missing or unknown ER status (NA)
+GSE96058,GSM2528121,F43,Missing or unknown ER status (NA)
+GSE96058,GSM2528126,F48,Missing or unknown ER status (NA)
+GSE96058,GSM2528127,F49,Missing or unknown ER status (NA)
+GSE96058,GSM2528137,F59,Missing or unknown ER status (NA)
+GSE96058,GSM2528145,F67,Missing or unknown ER status (NA)
+GSE96058,GSM2528151,F73,Missing or unknown ER status (NA)
+GSE96058,GSM2528158,F80,Missing or unknown ER status (NA)
+GSE96058,GSM2528174,F96,Missing or unknown ER status (NA)
+GSE96058,GSM2528185,F107,Missing or unknown ER status (NA)
+GSE96058,GSM2528222,F144,Missing or unknown ER status (NA)
+GSE96058,GSM2528223,F145,Missing or unknown ER status (NA)
+GSE96058,GSM2528232,F154,Missing or unknown ER status (NA)
+GSE96058,GSM2528236,F158,Missing or unknown ER status (NA)
+GSE96058,GSM2528244,F166,Missing or unknown ER status (NA)
+GSE96058,GSM2528251,F173,Missing or unknown ER status (NA)
+GSE96058,GSM2528270,F192,Missing or unknown ER status (NA)
+GSE96058,GSM2528283,F205,Missing or unknown ER status (NA)
+GSE96058,GSM2528296,F218,Missing or unknown ER status (NA)
+GSE96058,GSM2528321,F243,Missing or unknown ER status (NA)
+GSE96058,GSM2528336,F258,Missing or unknown ER status (NA)
+GSE96058,GSM2528344,F266,Missing or unknown ER status (NA)
+GSE96058,GSM2528364,F286,Missing or unknown ER status (NA)
+GSE96058,GSM2528366,F288,Missing or unknown ER status (NA)
+GSE96058,GSM2528380,F302,Missing or unknown ER status (NA)
+GSE96058,GSM2528382,F304,Missing or unknown ER status (NA)
+GSE96058,GSM2528396,F318,Missing or unknown ER status (NA)
+GSE96058,GSM2528411,F333,Missing or unknown ER status (NA)
+GSE96058,GSM2528421,F343,Missing or unknown ER status (NA)
+GSE96058,GSM2528460,F382,Missing or unknown ER status (NA)
+GSE96058,GSM2528493,F415,Missing or unknown ER status (NA)
+GSE96058,GSM2528510,F432,Missing or unknown ER status (NA)
+GSE96058,GSM2528524,F446,Missing or unknown ER status (NA)
+GSE96058,GSM2528525,F447,Missing or unknown ER status (NA)
+GSE96058,GSM2528584,F506,Missing or unknown ER status (NA)
+GSE96058,GSM2528651,F573,Missing or unknown ER status (NA)
+GSE96058,GSM2528653,F575,Missing or unknown ER status (NA)
+GSE96058,GSM2528703,F625,Missing or unknown ER status (NA)
+GSE96058,GSM2528721,F643,Missing or unknown ER status (NA)
+GSE96058,GSM2528728,F650,Missing or unknown ER status (NA)
+GSE96058,GSM2528732,F654,Missing or unknown ER status (NA)
+GSE96058,GSM2528733,F655,Missing or unknown ER status (NA)
+GSE96058,GSM2528743,F665,Missing or unknown ER status (NA)
+GSE96058,GSM2528746,F668,Missing or unknown ER status (NA)
+GSE96058,GSM2528750,F672,Missing or unknown ER status (NA)
+GSE96058,GSM2528753,F675,Missing or unknown ER status (NA)
+GSE96058,GSM2528760,F682,Missing or unknown ER status (NA)
+GSE96058,GSM2528772,F694,Missing or unknown ER status (NA)
+GSE96058,GSM2528779,F701,Missing or unknown ER status (NA)
+GSE96058,GSM2528810,F732,Missing or unknown ER status (NA)
+GSE96058,GSM2528824,F746,Missing or unknown ER status (NA)
+GSE96058,GSM2528826,F748,Missing or unknown ER status (NA)
+GSE96058,GSM2528833,F755,Missing or unknown ER status (NA)
+GSE96058,GSM2528838,F760,Missing or unknown ER status (NA)
+GSE96058,GSM2528839,F761,Missing or unknown ER status (NA)
+GSE96058,GSM2528844,F766,Missing or unknown ER status (NA)
+GSE96058,GSM2528847,F769,Missing or unknown ER status (NA)
+GSE96058,GSM2528862,F784,Missing or unknown ER status (NA)
+GSE96058,GSM2528863,F785,Missing or unknown ER status (NA)
+GSE96058,GSM2528927,F849,Missing or unknown ER status (NA)
+GSE96058,GSM2529031,F953,Missing or unknown ER status (NA)
+GSE96058,GSM2529040,F962,Missing or unknown ER status (NA)
+GSE96058,GSM2529047,F969,Missing or unknown ER status (NA)
+GSE96058,GSM2529072,F994,Missing or unknown ER status (NA)
+GSE96058,GSM2529245,F1167,Missing or unknown ER status (NA)
+GSE96058,GSM2529252,F1174,Missing or unknown ER status (NA)
+GSE96058,GSM2529257,F1179,Missing or unknown ER status (NA)
+GSE96058,GSM2529275,F1197,Missing or unknown ER status (NA)
+GSE96058,GSM2529286,F1208,Missing or unknown ER status (NA)
+GSE96058,GSM2529287,F1209,Missing or unknown ER status (NA)
+GSE96058,GSM2529291,F1213,Missing or unknown ER status (NA)
+GSE96058,GSM2529299,F1221,Missing or unknown ER status (NA)
+GSE96058,GSM2529307,F1229,Missing or unknown ER status (NA)
+GSE96058,GSM2529309,F1231,Missing or unknown ER status (NA)
+GSE96058,GSM2529316,F1238,Missing or unknown ER status (NA)
+GSE96058,GSM2529317,F1239,Missing or unknown ER status (NA)
+GSE96058,GSM2529327,F1249,Missing or unknown ER status (NA)
+GSE96058,GSM2529338,F1260,Missing or unknown ER status (NA)
+GSE96058,GSM2529353,F1275,Missing or unknown ER status (NA)
+GSE96058,GSM2529354,F1276,Missing or unknown ER status (NA)
+GSE96058,GSM2529381,F1303,Missing or unknown ER status (NA)
+GSE96058,GSM2529382,F1304,Missing or unknown ER status (NA)
+GSE96058,GSM2529384,F1306,Missing or unknown ER status (NA)
+GSE96058,GSM2529451,F1373,Missing or unknown ER status (NA)
+GSE96058,GSM2529459,F1381,Missing or unknown ER status (NA)
+GSE96058,GSM2529486,F1408,Missing or unknown ER status (NA)
+GSE96058,GSM2529492,F1414,Missing or unknown ER status (NA)
+GSE96058,GSM2529513,F1435,Missing or unknown ER status (NA)
+GSE96058,GSM2529528,F1450,Missing or unknown ER status (NA)
+GSE96058,GSM2529542,F1464,Missing or unknown ER status (NA)
+GSE96058,GSM2529547,F1469,Missing or unknown ER status (NA)
+GSE96058,GSM2529549,F1471,Missing or unknown ER status (NA)
+GSE96058,GSM2529557,F1479,Missing or unknown ER status (NA)
+GSE96058,GSM2529562,F1484,Missing or unknown ER status (NA)
+GSE96058,GSM2529564,F1486,Missing or unknown ER status (NA)
+GSE96058,GSM2529573,F1495,Missing or unknown ER status (NA)
+GSE96058,GSM2529579,F1501,Missing or unknown ER status (NA)
+GSE96058,GSM2529623,F1545,Missing or unknown ER status (NA)
+GSE96058,GSM2529629,F1551,Missing or unknown ER status (NA)
+GSE96058,GSM2529638,F1560,Missing or unknown ER status (NA)
+GSE96058,GSM2529678,F1600,Missing or unknown ER status (NA)
+GSE96058,GSM2529682,F1604,Missing or unknown ER status (NA)
+GSE96058,GSM2529707,F1629,Missing or unknown ER status (NA)
+GSE96058,GSM2529723,F1645,Missing or unknown ER status (NA)
+GSE96058,GSM2529850,F1772,Missing or unknown ER status (NA)
+GSE96058,GSM2529906,F1828,Missing or unknown ER status (NA)
+GSE96058,GSM2529968,F1890,Missing or unknown ER status (NA)
+GSE96058,GSM2530084,F2006,Missing or unknown ER status (NA)
+GSE96058,GSM2530087,F2009,Missing or unknown ER status (NA)
+GSE96058,GSM2530137,F2059,Missing or unknown ER status (NA)
+GSE96058,GSM2530147,F2069,Missing or unknown ER status (NA)
+GSE96058,GSM2530166,F2088,Missing or unknown ER status (NA)
+GSE96058,GSM2530169,F2091,Missing or unknown ER status (NA)
+GSE96058,GSM2530177,F2099,Missing or unknown ER status (NA)
+GSE96058,GSM2530213,F2135,Missing or unknown ER status (NA)
+GSE96058,GSM2530239,F2161,Missing or unknown ER status (NA)
+GSE96058,GSM2530371,F2293,Missing or unknown ER status (NA)
+GSE96058,GSM2530377,F2299,Missing or unknown ER status (NA)
+GSE96058,GSM2530378,F2300,Missing or unknown ER status (NA)
+GSE96058,GSM2530390,F2312,Missing or unknown ER status (NA)
+GSE96058,GSM2530422,F2344,Missing or unknown ER status (NA)
+GSE96058,GSM2530521,F2443,Missing or unknown ER status (NA)
+GSE96058,GSM2530682,F2604,Missing or unknown ER status (NA)
+GSE96058,GSM2530699,F2621,Missing or unknown ER status (NA)
+GSE96058,GSM2530701,F2623,Missing or unknown ER status (NA)
+GSE96058,GSM2530702,F2624,Missing or unknown ER status (NA)
+GSE96058,GSM2530710,F2632,Missing or unknown ER status (NA)
+GSE96058,GSM2530714,F2636,Missing or unknown ER status (NA)
+GSE96058,GSM2530715,F2637,Missing or unknown ER status (NA)
+GSE96058,GSM2530717,F2639,Missing or unknown ER status (NA)
+GSE96058,GSM2530742,F2664,Missing or unknown ER status (NA)
+GSE96058,GSM2530755,F2677,Missing or unknown ER status (NA)
+GSE96058,GSM2530759,F2681,Missing or unknown ER status (NA)
+GSE96058,GSM2530762,F2684,Missing or unknown ER status (NA)
+GSE96058,GSM2530773,F2695,Missing or unknown ER status (NA)
+GSE96058,GSM2530774,F2696,Missing or unknown ER status (NA)
+GSE96058,GSM2530777,F2699,Missing or unknown ER status (NA)
+GSE96058,GSM2530783,F2705,Missing or unknown ER status (NA)
+GSE96058,GSM2530785,F2707,Missing or unknown ER status (NA)
+GSE96058,GSM2530786,F2708,Missing or unknown ER status (NA)
+GSE96058,GSM2530788,F2710,Missing or unknown ER status (NA)
+GSE96058,GSM2530790,F2712,Missing or unknown ER status (NA)
+GSE96058,GSM2530796,F2718,Missing or unknown ER status (NA)
+GSE96058,GSM2530840,F2762,Missing or unknown ER status (NA)
+GSE96058,GSM2530850,F2772,Missing or unknown ER status (NA)
+GSE96058,GSM2530852,F2774,Missing or unknown ER status (NA)
+GSE96058,GSM2530859,F2781,Missing or unknown ER status (NA)
+GSE96058,GSM2530860,F2782,Missing or unknown ER status (NA)
+GSE96058,GSM2530862,F2784,Missing or unknown ER status (NA)
+GSE96058,GSM2530865,F2787,Missing or unknown ER status (NA)
+GSE96058,GSM2530866,F2788,Missing or unknown ER status (NA)
+GSE96058,GSM2530886,F2808,Missing or unknown ER status (NA)
+GSE96058,GSM2530888,F2810,Missing or unknown ER status (NA)
+GSE96058,GSM2530892,F2814,Missing or unknown ER status (NA)
+GSE96058,GSM2530893,F2815,Missing or unknown ER status (NA)
+GSE96058,GSM2530896,F2818,Missing or unknown ER status (NA)
+GSE96058,GSM2530927,F2849,Missing or unknown ER status (NA)
+GSE96058,GSM2530934,F2856,Missing or unknown ER status (NA)
+GSE96058,GSM2530938,F2860,Missing or unknown ER status (NA)
+GSE96058,GSM2530949,F2871,Missing or unknown ER status (NA)
+GSE96058,GSM2530951,F2873,Missing or unknown ER status (NA)
+GSE96058,GSM2530954,F2876,Missing or unknown ER status (NA)
+GSE96058,GSM2530956,F2878,Missing or unknown ER status (NA)
+GSE96058,GSM2530963,F2885,Missing or unknown ER status (NA)
+GSE96058,GSM2530972,F2894,Missing or unknown ER status (NA)
+GSE96058,GSM2530973,F2895,Missing or unknown ER status (NA)
+GSE96058,GSM2530999,F2921,Missing or unknown ER status (NA)
+GSE96058,GSM2531010,F2932,Missing or unknown ER status (NA)
+GSE96058,GSM2531013,F2935,Missing or unknown ER status (NA)
+GSE96058,GSM2531015,F2937,Missing or unknown ER status (NA)
+GSE96058,GSM2531019,F2941,Missing or unknown ER status (NA)
+GSE96058,GSM2531026,F2948,Missing or unknown ER status (NA)
+GSE96058,GSM2531030,F2952,Missing or unknown ER status (NA)
+GSE96058,GSM2531032,F2954,Missing or unknown ER status (NA)
+GSE96058,GSM2531036,F2958,Missing or unknown ER status (NA)
+GSE96058,GSM2531040,F2962,Missing or unknown ER status (NA)
+GSE96058,GSM2531043,F2965,Missing or unknown ER status (NA)
+GSE96058,GSM2531045,F2967,Missing or unknown ER status (NA)
+GSE96058,GSM2531054,F2976,Missing or unknown ER status (NA)
+GSE96058,GSM2531320,F3242,Missing or unknown ER status (NA)
+GSE96058,GSM2531352,F8repl,Technical replicate sample
+GSE96058,GSM2531356,F69repl,Technical replicate sample
+GSE96058,GSM2531357,F73repl,Technical replicate sample
+GSE96058,GSM2531358,F112repl,Technical replicate sample
+GSE96058,GSM2531359,F116repl,Technical replicate sample
+GSE96058,GSM2531360,F184repl,Technical replicate sample
+GSE96058,GSM2531362,F187repl,Technical replicate sample
+GSE96058,GSM2531363,F218repl,Technical replicate sample
+GSE96058,GSM2531370,F445repl,Technical replicate sample
+GSE96058,GSM2531371,F461repl,Technical replicate sample
+GSE96058,GSM2531372,F498repl,Technical replicate sample
+GSE96058,GSM2531373,F542repl,Technical replicate sample
+GSE96058,GSM2531374,F545repl,Technical replicate sample
+GSE96058,GSM2531375,F573repl,Technical replicate sample
+GSE96058,GSM2531376,F574repl,Technical replicate sample
+GSE96058,GSM2531377,F673repl,Technical replicate sample
+GSE96058,GSM2531378,F679repl,Technical replicate sample
+GSE96058,GSM2531380,F713repl,Technical replicate sample
+GSE96058,GSM2531381,F717repl,Technical replicate sample
+GSE96058,GSM2531382,F724repl,Technical replicate sample
+GSE96058,GSM2531383,F748repl,Technical replicate sample
+GSE96058,GSM2531384,F766repl,Technical replicate sample
+GSE96058,GSM2531385,F777repl,Technical replicate sample
+GSE96058,GSM2531386,F781repl,Technical replicate sample
+GSE96058,GSM2531387,F783repl,Technical replicate sample
+GSE96058,GSM2531388,F784repl,Technical replicate sample
+GSE96058,GSM2531390,F799repl,Technical replicate sample
+GSE96058,GSM2531391,F803repl,Technical replicate sample
+GSE96058,GSM2531392,F804repl,Technical replicate sample
+GSE96058,GSM2531393,F807repl,Technical replicate sample
+GSE96058,GSM2531394,F813repl,Technical replicate sample
+GSE96058,GSM2531395,F833repl,Technical replicate sample
+GSE96058,GSM2531396,F847repl,Technical replicate sample
+GSE96058,GSM2531397,F895repl,Technical replicate sample
+GSE96058,GSM2531398,F912repl,Technical replicate sample
+GSE96058,GSM2531399,F933repl,Technical replicate sample
+GSE96058,GSM2531400,F934repl,Technical replicate sample
+GSE96058,GSM2531402,F1108repl,Technical replicate sample
+GSE96058,GSM2531408,F1283repl,Technical replicate sample
+GSE96058,GSM2531417,F1582repl,Technical replicate sample
+GSE96058,GSM2531418,F1584repl,Technical replicate sample
+GSE96058,GSM2531419,F1587repl,Technical replicate sample
+GSE96058,GSM2531420,F1591repl,Technical replicate sample
+GSE96058,GSM2531421,F1605repl,Technical replicate sample
+GSE96058,GSM2531422,F1617repl,Technical replicate sample
+GSE96058,GSM2531423,F1628repl,Technical replicate sample
+GSE96058,GSM2531424,F1635repl,Technical replicate sample
+GSE96058,GSM2531425,F1640repl,Technical replicate sample
+GSE96058,GSM2531426,F1648repl,Technical replicate sample
+GSE96058,GSM2531427,F1658repl,Technical replicate sample
+GSE96058,GSM2531428,F1689repl,Technical replicate sample
+GSE96058,GSM2531429,F1748repl,Technical replicate sample
+GSE96058,GSM2531430,F1781repl,Technical replicate sample
+GSE96058,GSM2531431,F1905repl,Technical replicate sample
+GSE96058,GSM2531432,F1923repl,Technical replicate sample
+GSE96058,GSM2531433,F1928repl,Technical replicate sample
+GSE96058,GSM2531434,F1950repl,Technical replicate sample
+GSE96058,GSM2531435,F1965repl,Technical replicate sample
+GSE96058,GSM2531436,F2018repl,Technical replicate sample
+GSE96058,GSM2531437,F2067repl,Technical replicate sample
+GSE96058,GSM2531438,F2069repl,Technical replicate sample
+GSE96058,GSM2531439,F2151repl,Technical replicate sample
+GSE96058,GSM2531440,F2174repl,Technical replicate sample
+GSE96058,GSM2531441,F2175repl,Technical replicate sample
+GSE96058,GSM2531442,F2277repl,Technical replicate sample
+GSE96058,GSM2531443,F2281repl,Technical replicate sample
+GSE96058,GSM2531444,F2287repl,Technical replicate sample
+GSE96058,GSM2531445,F2299repl,Technical replicate sample
+GSE96058,GSM2531446,F2359repl,Technical replicate sample
+GSE96058,GSM2531448,F2390repl,Technical replicate sample
+GSE96058,GSM2531449,F2398repl,Technical replicate sample
+GSE96058,GSM2531450,F2406repl,Technical replicate sample
+GSE96058,GSM2531451,F2407repl,Technical replicate sample
+GSE96058,GSM2531452,F2408repl,Technical replicate sample
+GSE96058,GSM2531453,F2424repl,Technical replicate sample
+GSE96058,GSM2531454,F2459repl,Technical replicate sample
+GSE96058,GSM2531455,F2482repl,Technical replicate sample
+GSE96058,GSM2531456,F2503repl,Technical replicate sample
+GSE96058,GSM2531457,F2539repl,Technical replicate sample
+GSE96058,GSM2531458,F2621repl,Technical replicate sample
+GSE96058,GSM2531459,F2625repl,Technical replicate sample
+GSE96058,GSM2531460,F2632repl,Technical replicate sample
+GSE96058,GSM2531461,F2656repl,Technical replicate sample
+GSE96058,GSM2531462,F2679repl,Technical replicate sample
+GSE96058,GSM2531463,F2691repl,Technical replicate sample
+GSE96058,GSM2531464,F2703repl,Technical replicate sample
+GSE96058,GSM2531465,F2755repl,Technical replicate sample
+GSE96058,GSM2531466,F2781repl,Technical replicate sample
+GSE96058,GSM2531467,F2790repl,Technical replicate sample
+GSE96058,GSM2531468,F2840repl,Technical replicate sample
+GSE96058,GSM2531469,F2841repl,Technical replicate sample
+GSE96058,GSM2531470,F2860repl,Technical replicate sample
+GSE96058,GSM2531472,F2872repl,Technical replicate sample
+GSE96058,GSM2531473,F2877repl,Technical replicate sample
+GSE96058,GSM2531474,F2911repl,Technical replicate sample
+GSE96058,GSM2531475,F2912repl,Technical replicate sample
+GSE96058,GSM2531477,F2958repl,Technical replicate sample
+GSE96058,GSM2531481,F3057repl,Technical replicate sample
+GSE96058,GSM2531483,F3085repl,Technical replicate sample
+GSE96058,GSM2531485,F3135repl,Technical replicate sample
+GSE96058,GSM2528220,F142,Missing or unknown ER status (NA)
+GSE96058,GSM2528535,F457,Missing or unknown ER status (NA)
+GSE96058,GSM2528602,F524,Missing or unknown ER status (NA)
+GSE96058,GSM2528654,F576,Missing or unknown ER status (NA)
+GSE96058,GSM2528655,F577,Missing or unknown ER status (NA)
+GSE96058,GSM2528656,F578,Missing or unknown ER status (NA)
+GSE96058,GSM2528712,F634,Missing or unknown ER status (NA)
+GSE96058,GSM2529261,F1183,Missing or unknown ER status (NA)
+GSE96058,GSM2529413,F1335,Missing or unknown ER status (NA)
+GSE96058,GSM2529516,F1438,Missing or unknown ER status (NA)
+GSE96058,GSM2529722,F1644,Missing or unknown ER status (NA)
+GSE96058,GSM2529911,F1833,Missing or unknown ER status (NA)
+GSE96058,GSM2529994,F1916,Missing or unknown ER status (NA)
+GSE96058,GSM2530389,F2311,Missing or unknown ER status (NA)
+GSE96058,GSM2531353,F30repl,Technical replicate sample
+GSE96058,GSM2531354,F49repl,Technical replicate sample
+GSE96058,GSM2531355,F54repl,Technical replicate sample
+GSE96058,GSM2531361,F185repl,Technical replicate sample
+GSE96058,GSM2531364,F229repl,Technical replicate sample
+GSE96058,GSM2531365,F274repl,Technical replicate sample
+GSE96058,GSM2531366,F282repl,Technical replicate sample
+GSE96058,GSM2531367,F327repl,Technical replicate sample
+GSE96058,GSM2531368,F405repl,Technical replicate sample
+GSE96058,GSM2531369,F437repl,Technical replicate sample
+GSE96058,GSM2531379,F685repl,Technical replicate sample
+GSE96058,GSM2531389,F785repl,Technical replicate sample
+GSE96058,GSM2531401,F1101repl,Technical replicate sample
+GSE96058,GSM2531403,F1143repl,Technical replicate sample
+GSE96058,GSM2531404,F1156repl,Technical replicate sample
+GSE96058,GSM2531405,F1167repl,Technical replicate sample
+GSE96058,GSM2531406,F1197repl,Technical replicate sample
+GSE96058,GSM2531407,F1214repl,Technical replicate sample
+GSE96058,GSM2531409,F1392repl,Technical replicate sample
+GSE96058,GSM2531410,F1438repl,Technical replicate sample
+GSE96058,GSM2531411,F1439repl,Technical replicate sample
+GSE96058,GSM2531412,F1497repl,Technical replicate sample
+GSE96058,GSM2531413,F1515repl,Technical replicate sample
+GSE96058,GSM2531414,F1519repl,Technical replicate sample
+GSE96058,GSM2531415,F1580repl,Technical replicate sample
+GSE96058,GSM2531416,F1581repl,Technical replicate sample
+GSE96058,GSM2531447,F2384repl,Technical replicate sample
+GSE96058,GSM2531471,F2871repl,Technical replicate sample
+GSE96058,GSM2531476,F2921repl,Technical replicate sample
+GSE96058,GSM2531478,F2974repl,Technical replicate sample
+GSE96058,GSM2531479,F3006repl,Technical replicate sample
+GSE96058,GSM2531480,F3028repl,Technical replicate sample
+GSE96058,GSM2531482,F3058repl,Technical replicate sample
+GSE96058,GSM2531484,F3127repl,Technical replicate sample
+GSE96058,GSM2531486,F3250repl,Technical replicate sample
+GSE96058,GSM2531487,F3265repl,Technical replicate sample

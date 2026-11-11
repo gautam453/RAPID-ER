@@ -1,0 +1,28 @@
+name: rapid_er
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+    - numpy
+    - pandas
+    - scipy
+    - scikit-learn
+    - torch
+    - torchvision
+    - xgboost
+    - matplotlib
+    - seaborn
+    - statsmodels
+    - GEOparse
+    - gseapy
+    - pyarrow
+    - jupyterlab
+    - pyyaml
+    - tqdm
+    - joblib
+    - requests
+    - python-docx
+    - pytest

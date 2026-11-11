@@ -1,0 +1,21 @@
+# Data files (exceed GitHub 100MB limit)
+data/
+bin/
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Virtual environments
+venv/
+env/
+.env
+
+# Logs and temporary files
+logs/*.log
+*.tmp
+manuscript/*.zip

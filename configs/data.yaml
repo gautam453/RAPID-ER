@@ -1,0 +1,33 @@
+data:
+  raw_dir: "C:/Users/gauta/.gemini/antigravity/scratch/RAPID_ER/data/raw"
+  interim_dir: "C:/Users/gauta/.gemini/antigravity/scratch/RAPID_ER/data/interim"
+  processed_dir: "C:/Users/gauta/.gemini/antigravity/scratch/RAPID_ER/data/processed"
+  metadata_dir: "C:/Users/gauta/.gemini/antigravity/scratch/RAPID_ER/metadata"
+  
+tcga:
+  project_id: "TCGA-BRCA"
+  sample_type: "Primary Tumor"
+  sample_type_code: "01"
+  workflow: "STAR - Counts"
+  min_expressed_samples_ratio: 0.20
+  min_count_threshold: 10
+  er_status_field: "er_status_by_ihc"
+
+gse96058:
+  accession: "GSE96058"
+  platform: "RNA-seq"
+  matrix_files:
+    - "GSE96058-GPL11154_series_matrix.txt.gz"
+    - "GSE96058-GPL18573_series_matrix.txt.gz"
+  expression_file: "GSE96058_gene_expression_3273_samples_and_136_replicates_transformed.csv.gz"
+
+gse42568:
+  accession: "GSE42568"
+  platform: "Affymetrix GPL570"
+  matrix_file: "GSE42568_series_matrix.txt.gz"
+  expression_scale: "log2 GC-RMA"
+
+harmonization:
+  transfer_strategies:
+    - "frozen_training_norm"
+    - "rank_norm"

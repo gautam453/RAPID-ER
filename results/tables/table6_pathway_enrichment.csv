@@ -1,0 +1,7 @@
+Gene_Set,Overlap,Overlap_Count,Pathway_Size,Odds_Ratio,P_Value,Adj_P_Value,Genes
+Estrogen Receptor (ER) Signaling,9/23,9,23,37.672,8.031616831896954e-11,4.818970099138173e-10,GATA3;IGF1R;TFF3;ERBB4;ESR1;TFF1;CA12;GREB1;SLC39A6
+FOXA1-GATA3 Transcriptional Coregulatory Network,4/15,4,15,20.953,0.00010249994866699185,0.0006149996920019512,GREB1;ESR1;GATA3;TFF1
+Basal-like / Triple-Negative Markers (Negative Regulators),2/15,2,15,8.804,0.026924541458098143,0.16154724874858886,SOX10;EGFR
+Luminal Epithelial Differentiation,2/15,2,15,8.804,0.026924541458098143,0.16154724874858886,ESR1;GATA3
+Cell Cycle Progression & Proliferation,0/16,0,16,0.0,1.0,1.0,
+Apoptosis & Survival Regulation,0/14,0,14,0.0,1.0,1.0,
