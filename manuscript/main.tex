@@ -4,6 +4,7 @@
 \usepackage[margin=1in]{geometry}
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{graphicx}
+\graphicspath{{figures/}{./}}
 \usepackage{booktabs}
 \usepackage{multirow}
 \usepackage{array}
@@ -33,9 +34,9 @@
 \begin{abstract}
 \noindent\textbf{Background:} Estrogen receptor alpha ($\text{ER}\alpha$, encoded by \textit{ESR1}) dictates endocrine therapy eligibility for approximately 70--80\% of all breast cancer patients globally. While immunohistochemistry (IHC) represents the clinical gold standard, pre-analytical tissue handling, cold ischemia drift, differing antibody affinities, and subjective visual scoring induce a 5--10\% diagnostic discordance rate. Although high-throughput transcriptomics offers an objective diagnostic modality, prior machine-learning classifiers suffer from severe cross-platform decay, high-dimensional gene selection instability, and a critical vulnerability we term the \textit{discrimination-calibration paradox}---where algorithms achieve exceptional discrimination ($>0.95$ AUROC) yet output severely distorted, uncalibrated risk probabilities under domain shift.
 
-\noindent\textbf{Methods:} We engineered the \textbf{RAPID-ER} framework across 4,218 rigorously audited breast cancer profiles from three landmark cohorts: TCGA-BRCA ($N = 1,044$, primary discovery and 5-fold cross-validation), SCAN-B / GSE96058 ($N = 3,073$, external RNA-seq validation), and GSE42568 ($N = 101$, cross-platform Affymetrix microarray stress-test). We mapped a universal 17,367-gene space and established the \textbf{Stability-Selected Multilayer Perceptron (SS-MLP)}, coupling 100-iteration repeated Elastic-Net bootstrap subsampling with a regularized deep neural network (256-64 GELU architecture). We evaluated two domain transfer strategies: parametric frozen training standardization (Strategy A) and label-free within-sample relative rank normalization (Strategy B), benchmarking probability calibration via Brier score decomposition, Expected Calibration Error (ECE), and selective classification abstention.
+\noindent\textbf{Methods:} We engineered the \textbf{RAPID-ER} framework across 4,218 rigorously audited breast cancer profiles from three landmark cohorts: TCGA-BRCA ($N = 1{,}044$, primary discovery and 5-fold cross-validation), SCAN-B / GSE96058 ($N = 3{,}073$, external RNA-seq validation), and GSE42568 ($N = 101$, cross-platform Affymetrix microarray stress-test). We mapped a universal 17,367-gene space and established the \textbf{Stability-Selected Multilayer Perceptron (SS-MLP)}, coupling 100-iteration repeated Elastic-Net bootstrap subsampling with a regularized deep neural network (256-64 GELU architecture). We evaluated two domain transfer strategies: parametric frozen training standardization (Strategy A) and label-free within-sample relative rank normalization (Strategy B), benchmarking probability calibration via Brier score decomposition, Expected Calibration Error (ECE), and selective classification abstention.
 
-\noindent\textbf{Results:} On internal cross-validation (TCGA-BRCA), SS-MLP achieved an out-of-fold AUROC of 0.9560 [95\% CI: 0.938, 0.970], AUPRC of 0.9851 [0.977, 0.991], Sensitivity of 92.07\%, Specificity of 93.67\%, and Brier score of 0.0675. In independent external RNA-seq validation (GSE96058, $N=3,073$), univariate \textit{ESR1} models collapsed under frozen standardization: despite a high AUROC of 0.9604, probability calibration suffered severe distortion (ECE = 0.4290, Intercept = 5.2361), causing a precipitous sensitivity collapse to 58.44\% that misdiagnosed 1,177 true ER-positive patients. By contrast, SS-MLP maintained high discrimination (AUROC 0.9500 [0.933, 0.965], Sensitivity 97.74\%) while cutting calibration error by over 10-fold (ECE = 0.0396, Brier = 0.0396). On cross-platform microarrays (GSE42568, $N=101$), frozen standardization completely failed due to probe dynamic range compression (\textit{ESR1} Sensitivity 0.0000, Brier 0.6188). Within-sample rank normalization (Strategy B) fully rescued cross-platform utility, elevating SS-MLP AUROC to 0.7943 [0.701, 0.874] and AUPRC to 0.8773 without retraining. An \textit{ESR1}-exclusion ablation demonstrated complete downstream transcriptomic redundancy (AUROC 0.9608, AUPRC 0.9863). Automated confidence triage with selective abstention achieved 99.6\% autonomous coverage with a low error rate of 3.92\% (dropping to 2.06\% at $\tau = 0.95$), safely routing borderline equivocal samples for confirmatory review.
+\noindent\textbf{Results:} On internal cross-validation (TCGA-BRCA), SS-MLP achieved an out-of-fold AUROC of 0.9560 [95\% CI: 0.938, 0.970], AUPRC of 0.9851 [0.977, 0.991], Sensitivity of 92.07\%, Specificity of 93.67\%, and Brier score of 0.0675. In independent external RNA-seq validation (GSE96058, $N=3{,}073$), univariate \textit{ESR1} models collapsed under frozen standardization: despite a high AUROC of 0.9604, probability calibration suffered severe distortion (ECE = 0.4290, Intercept = 5.2361), causing a precipitous sensitivity collapse to 58.44\% that misdiagnosed 1,177 true ER-positive patients. By contrast, SS-MLP maintained high discrimination (AUROC 0.9500 [0.933, 0.965], Sensitivity 97.74\%) while cutting calibration error by over 10-fold (ECE = 0.0396, Brier = 0.0396). On cross-platform microarrays (GSE42568, $N=101$), frozen standardization completely failed due to probe dynamic range compression (\textit{ESR1} Sensitivity 0.0000, Brier 0.6188). Within-sample rank normalization (Strategy B) fully rescued cross-platform utility, elevating SS-MLP AUROC to 0.7943 [0.701, 0.874] and AUPRC to 0.8773 without retraining. An \textit{ESR1}-exclusion ablation demonstrated complete downstream transcriptomic redundancy (AUROC 0.9608, AUPRC 0.9863). Automated confidence triage with selective abstention achieved 99.6\% autonomous coverage with a low error rate of 3.92\% (dropping to 2.06\% at $\tau = 0.95$), safely routing borderline equivocal samples for confirmatory review.
 
 \noindent\textbf{Conclusions:} High discriminative AUC can conceal catastrophic probability miscalibration under genomic domain shift. By combining stability-selected multi-gene architectures with label-free rank normalization and uncertainty abstention, RAPID-ER resolves the discrimination-calibration paradox, providing an open, platform-resilient decision-support benchmark for clinical oncology.
 
@@ -62,7 +63,59 @@ Rather, this study addresses a pervasive yet rarely acknowledged crisis in cance
     \item \textbf{Absence of Uncertainty-Aware Clinical Abstention:} Clinical diagnostic algorithms must recognize their own boundaries of confidence. Forced binary classification on ambiguous or borderline samples introduces preventable diagnostic error. Safe clinical translation requires an autonomous triage mechanism that outputs confident classifications while abstaining on equivocal cases for confirmatory pathology review \cite{kompa2021second}.
 \end{enumerate}
 
-To resolve these barriers, we established the **RAPID-ER** framework across 4,218 audited breast cancer patients from three major multi-center cohorts: TCGA-BRCA ($N = 1,044$), SCAN-B / GSE96058 ($N = 3,073$), and GSE42568 ($N = 101$). We developed the **Stability-Selected Multilayer Perceptron (SS-MLP)**, pairing repeated bootstrap Elastic-Net subsampling with a regularized deep neural network. Here, we present a comprehensive multi-cohort evaluation decoupling discrimination from calibration, demonstrating that within-sample rank normalization bridges technological platforms without batch retraining, uncovering downstream transcriptional redundancy that preserves diagnostic power even in the complete absence of \textit{ESR1}, and demonstrating selective classification with transparent clinical uncertainty quantification.
+To resolve these barriers, we established the **RAPID-ER** framework across 4,218 audited breast cancer patients from three major multi-center cohorts: TCGA-BRCA ($N = 1{,}044$), SCAN-B / GSE96058 ($N = 3{,}073$), and GSE42568 ($N = 101$). We developed the **Stability-Selected Multilayer Perceptron (SS-MLP)**, pairing repeated bootstrap Elastic-Net subsampling with a regularized deep neural network. Here, we present a comprehensive multi-cohort evaluation decoupling discrimination from calibration, demonstrating that within-sample rank normalization bridges technological platforms without batch retraining, uncovering downstream transcriptional redundancy that preserves diagnostic power even in the complete absence of \textit{ESR1}, and demonstrating selective classification with transparent clinical uncertainty quantification.
+
+\section{Materials and Methods}
+
+\subsection{Cohort Acquisition, Quality Audit, and Exclusion Criteria}
+All genomic and clinical records were acquired from public repositories:
+\begin{enumerate}
+    \item \textbf{TCGA-BRCA ($N = 1{,}044$):} Raw STAR-derived gene counts and clinical biospecimen manifests were acquired via the NCI GDC API (release 32.0). Auditing identified 1,111 biospecimens. We excluded 16 duplicate technical vials (`01B`) to prevent patient overlap and 51 records with unrecorded or indeterminate clinical ER IHC status, leaving 1,044 unique primary tumours.
+    \item \textbf{SCAN-B / GSE96058 ($N = 3{,}073$):} $\log_2(\text{FPKM} + 0.1)$ expression profiles and clinical manifests across 3,409 runs were obtained from NCBI GEO. Auditing excluded 136 technical replicate profiles and 200 patients missing recorded IHC status, yielding 3,073 eligible unique patients.
+    \item \textbf{GSE42568 ($N = 101$):} Affymetrix Human Genome U133 Plus 2.0 array profiles ($\log_2$ GC-RMA scale) were obtained from GEO. From 121 hybridizations, 17 reduction mammoplasty non-tumour controls and 3 indeterminate samples were excluded, leaving 101 primary breast carcinomas.
+\end{enumerate}
+
+\subsection{Gene Mapping and Shared Feature Space}
+Ensembl IDs (TCGA) were converted via GENCODE v36. SCAN-B gene symbols were harmonized against HGNC approved aliases. Affymetrix probe sets were mapped using the Jetset scoring algorithm. The intersection across all three cohorts yielded a universal feature space of \textbf{17,367 HGNC symbols}.
+
+\subsection{Leakage Prevention and Cross-Validation Protocol}
+All data transformations, variance filtering, stability selection frequencies, and neural network weights were fitted exclusively on designated training partitions. For TCGA-BRCA, 5-fold stratified cross-validation was implemented at the unique patient level. External cohorts (GSE96058, GSE42568) were fully isolated and evaluated only after all training parameters were frozen.
+
+\subsection{Preprocessing and Transfer Regimes}
+Within each training partition, unexpressed genes were filtered by retaining features exhibiting $\ge 10$ raw counts in $\ge 20\%$ of training samples, filtering $\sim 2{,}160$ low-expression noise features and retaining $\sim 15{,}200$ active genes. Read counts were normalized to $\log_2(\text{CPM} + 1)$.
+\begin{itemize}
+    \item \textbf{Transfer Strategy A (Frozen Standardization):} Feature-wise mean $\mu_{\text{train}}$ and standard deviation $\sigma_{\text{train}}$ were calculated on training partitions and applied unchanged to external cohorts:
+    \begin{equation}
+    \tilde{x}_{ij} = \frac{x_{ij} - \mu_{j,\text{train}}}{\sigma_{j,\text{train}} + \epsilon}
+    \end{equation}
+    \item \textbf{Transfer Strategy B (Within-Sample Rank Normalization):} Across the 17,367 common genes within each sample independently, expression values were converted to relative fractional ranks in $[0, 1]$:
+    \begin{equation}
+    \tilde{x}_{ij} = \frac{\text{Rank}(x_{ij}) - 1}{P - 1}
+    \end{equation}
+\end{itemize}
+
+\paragraph{Methodological Consistency of Transfer Strategy B:}
+To ensure absolute methodological rigor and prevent cross-distribution artifacts, the Strategy B model evaluated in Table~\ref{tab:table3} was trained \textit{directly} on within-sample fractional rank-transformed TCGA-BRCA training partitions ($[0, 1]$ rank domain), rather than post-hoc evaluation of a model trained on parametric $Z$-scores. Training directly on relative ranks ensures that the neural network learns weight representations natively aligned with the invariant ordinal rank domain, eliminating the catastrophic scale collapse observed under frozen parametric standardization.
+
+\subsection{Repeated Elastic-Net Stability Selection}
+Within each training fold, we executed repeated Elastic-Net subsampling across $B = 100$ bootstrap draws (subsampling fraction $\alpha = 0.8$). In each resample, an Elastic-Net logistic model ($\ell_1\text{-ratio} = 0.5$, penalization parameter $\lambda$ chosen via inner 5-fold cross-validation) was fitted. Feature selection frequencies $\hat{\Pi}_k = \frac{1}{B} \sum_{b=1}^B \mathbb{I}\{\hat{\beta}_k^{(b)} \ne 0\}$ were computed. Genes satisfying $\hat{\Pi}_k \ge \pi_{\text{threshold}} = 0.70$ were selected, yielding a stable consensus signature of 300 genes.
+
+\subsection{SS-MLP Architecture and Training}
+The proposed Stability-Selected Multilayer Perceptron (SS-MLP) comprises:
+\begin{itemize}
+    \item Input dimension: $d = 300$ stability-selected genes.
+    \item Hidden Layer 1: Linear($300 \to 256$), Gaussian Error Linear Unit (GELU) activation, Dropout ($p = 0.35$).
+    \item Hidden Layer 2: Linear($256 \to 64$), GELU activation, Dropout ($p = 0.25$).
+    \item Output Layer: Linear($64 \to 1$), Sigmoid activation producing posterior probability $\hat{p} \in [0, 1]$.
+\end{itemize}
+The network was trained using the AdamW optimizer (learning rate $\eta = 5 \times 10^{-4}$, weight decay $\lambda_{\text{reg}} = 10^{-3}$) under class-weighted binary cross-entropy loss with early stopping (patience $= 12$ epochs).
+
+\subsection{Evaluation Metrics and Uncertainty Quantification}
+Model discrimination was assessed using AUROC and AUPRC with 95\% DeLong and bootstrap confidence intervals. Probability calibration was evaluated via the Brier score and its three-component Sanders/Murphy decomposition:
+\begin{equation}
+\text{Brier} = \text{Reliability} - \text{Resolution} + \text{Uncertainty}
+\end{equation}
+Expected Calibration Error (ECE) was computed across 10 equal-width bins. Logistic calibration slope and intercept were fitted via logit regression: $\text{logit}(y) = a + b \cdot \text{logit}(\hat{p})$. For selective classification with abstention, a confidence threshold $\tau \in [0.5, 0.99]$ was established: samples with $\max(\hat{p}, 1-\hat{p}) \ge \tau$ were autonomously classified; otherwise, they were referred for confirmatory IHC review.
 
 \section{Results}
 
@@ -72,8 +125,8 @@ To ensure complete reproducibility and eliminate data leakage, we curated and au
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.95\textwidth]{figures/figure1_cohort_flow_diagram.png}
-\caption{\textbf{Cohort Flow Diagram and Experimental Architecture.} Systematic biospecimen acquisition, filtration criteria, and experimental deep learning pipeline across TCGA-BRCA ($N=1,044$), GSE96058 ($N=3,073$), and GSE42568 ($N=101$).}
+\includegraphics[width=0.95\textwidth]{figure1_cohort_flow_diagram.png}
+\caption{\textbf{Cohort Flow Diagram and Experimental Architecture.} Systematic biospecimen acquisition, filtration criteria, and experimental deep learning pipeline across TCGA-BRCA ($N=1{,}044$), GSE96058 ($N=3{,}073$), and GSE42568 ($N=101$).}
 \label{fig:cohort_flow}
 \end{figure}
 
@@ -108,12 +161,12 @@ Clinical ER Reference & Surgical Pathology IHC & Surgical Pathology IHC & Radiol
 
 \subsection{Internal 5-Fold Cross-Validation: Multi-Gene Deep Learning Eliminates Variance}
 
-Under strict patient-stratified 5-fold cross-validation on TCGA-BRCA ($N = 1,044$), we benchmarked the proposed Stability-Selected Multilayer Perceptron (SS-MLP) against an \textit{ESR1}-only univariate logistic model and six standard machine-learning classifiers (Table~\ref{tab:table2}, Figure~\ref{fig:internal_cv}).
+Under strict patient-stratified 5-fold cross-validation on TCGA-BRCA ($N = 1{,}044$), we benchmarked the proposed Stability-Selected Multilayer Perceptron (SS-MLP) against an \textit{ESR1}-only univariate logistic model and six standard machine-learning classifiers (Table~\ref{tab:table2}, Figure~\ref{fig:internal_cv}).
 
 \begin{table}[H]
 \centering
 \small
-\caption{TCGA-BRCA Internal 5-Fold Cross-Validation Performance Comparison ($N = 1,044$).}
+\caption{TCGA-BRCA Internal 5-Fold Cross-Validation Performance Comparison ($N = 1{,}044$).}
 \label{tab:table2}
 \resizebox{\textwidth}{!}{
 \begin{tabular}{lcccccc}
@@ -135,8 +188,8 @@ XGBoost & 0.9467 [0.925, 0.966] & 0.9751 [0.959, 0.988] & 0.9579 & 0.8861 & 0.05
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.95\textwidth]{figures/figure2_internal_cv_roc_pr.png}
-\caption{\textbf{Internal 5-Fold Cross-Validation Performance on TCGA-BRCA ($N=1,044$).} Receiver Operating Characteristic (ROC) and Precision-Recall (PR) curves for SS-MLP and baseline models under out-of-fold evaluation.}
+\includegraphics[width=0.95\textwidth]{figure2_internal_cv_roc_pr.png}
+\caption{\textbf{Internal 5-Fold Cross-Validation Performance on TCGA-BRCA ($N=1{,}044$).} Receiver Operating Characteristic (ROC) and Precision-Recall (PR) curves for SS-MLP and baseline models under out-of-fold evaluation.}
 \label{fig:internal_cv}
 \end{figure}
 
@@ -144,7 +197,7 @@ On out-of-fold evaluation, SS-MLP achieved an AUROC of 0.9560 [95\% CI: 0.9381, 
 
 \subsection{The Discrimination-Calibration Paradox: High External AUC Conceals Severe Probability Distortion}
 
-When models trained on TCGA-BRCA were externally deployed on SCAN-B / GSE96058 ($N = 3,073$) under standard frozen standardization (Transfer Strategy A), the \textit{discrimination-calibration paradox} manifested with stark clinical consequences (Table~\ref{tab:table3}, Figure~\ref{fig:external_valid}).
+When models trained on TCGA-BRCA were externally deployed on SCAN-B / GSE96058 ($N = 3{,}073$) under standard frozen standardization (Transfer Strategy A), the \textit{discrimination-calibration paradox} manifested with stark clinical consequences (Table~\ref{tab:table3}, Figure~\ref{fig:external_valid}).
 
 \begin{table}[H]
 \centering
@@ -172,7 +225,7 @@ GSE42568 (Microarray) & \textbf{SS-MLP} & \textbf{Strategy B (Rank)} & \textbf{0
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.95\textwidth]{figures/figure3_external_validation_generalization.png}
+\includegraphics[width=0.95\textwidth]{figure3_external_validation_generalization.png}
 \caption{\textbf{Cross-Cohort and Cross-Platform External Generalization.} Comparison of AUROC and AUPRC across independent cohorts (GSE96058 RNA-seq and GSE42568 microarray) evaluating Transfer Strategy A vs.\ Strategy B.}
 \label{fig:external_valid}
 \end{figure}
@@ -193,7 +246,7 @@ To understand the biological mechanism underpinning this resilience, we analyzed
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.95\textwidth]{figures/figure4_gene_stability_signature.png}
+\includegraphics[width=0.95\textwidth]{figure4_gene_stability_signature.png}
 \caption{\textbf{Gene Selection Stability and Molecular Signature.} (A) Selection frequency distribution across 100 Elastic-Net bootstrap resamples. (B) Top consensus genes ranked by selection stability and mean regression coefficients.}
 \label{fig:stability}
 \end{figure}
@@ -263,7 +316,7 @@ GSE42568 & \textbf{SS-MLP} & \textbf{Strategy B} & \textbf{0.3303} & \textbf{0.1
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.95\textwidth]{figures/figure5_calibration_reliability_curves.png}
+\includegraphics[width=0.95\textwidth]{figure5_calibration_reliability_curves.png}
 \caption{\textbf{Probability Calibration and Reliability Analysis.} Calibration curves and Brier score decompositions illustrating the discrimination-calibration paradox under cross-cohort and cross-platform transfer.}
 \label{fig:calibration}
 \end{figure}
@@ -276,12 +329,12 @@ In clinical diagnostic workflows, an automated algorithm must recognize its own 
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.95\textwidth]{figures/figure6_uncertainty_coverage_risk_curves.png}
+\includegraphics[width=0.95\textwidth]{figure6_uncertainty_coverage_risk_curves.png}
 \caption{\textbf{Selective Classification and Uncertainty Quantification.} Coverage-risk tradeoff curves illustrating clinical error reduction under automated abstention thresholds $\tau \in [0.5, 0.99]$.}
 \label{fig:uncertainty}
 \end{figure}
 
-On the external SCAN-B cohort ( = 3,073$), setting a moderate confidence threshold of $\tau = 0.80$ enables the model to autonomously classify \textbf{99.6\%} of patients (3,060 of 3,073) with a selective error rate of only \textbf{3.92\%}, while safely abstaining on the 13 ambiguous borderline cases (0.4\%) and routing them for reflex immunohistochemical review. At a more stringent threshold of $\tau = 0.95$, the system retains \textbf{88.3\%} autonomous coverage (2,713 patients) while cutting the diagnostic error rate in half to \textbf{2.06\%} (56 total errors). This provides a concrete clinical blueprint for deployment: the algorithm functions as a high-throughput primary diagnostic screen, autonomously signing out confident luminal profiles while identifying borderline specimens for expert pathologist review.
+On the external SCAN-B cohort ( = 3,073$), setting a moderate confidence threshold of $\tau = 0.80$ enables the model to autonomously classify \textbf{99.6\%} of patients (3{,}060 of 3{,}073) with a selective error rate of only \textbf{3.92\%}, while safely abstaining on the 13 ambiguous borderline cases (0.4\%) and routing them for reflex immunohistochemical review. At a more stringent threshold of $\tau = 0.95$, the system retains \textbf{88.3\%} autonomous coverage (2,713 patients) while cutting the diagnostic error rate in half to \textbf{2.06\%} (56 total errors). This provides a concrete clinical blueprint for deployment: the algorithm functions as a high-throughput primary diagnostic screen, autonomously signing out confident luminal profiles while identifying borderline specimens for expert pathologist review.
 
 
 \subsection{Functional Pathway Enrichment Validates Luminal Lineage Fidelity}
@@ -311,12 +364,12 @@ Apoptosis \& Survival Regulation & 0 / 14 & 0.000 & 1.00e+00 & 1.00e+00 & Not En
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.95\textwidth]{figures/figure7_pathway_enrichment.png}
+\includegraphics[width=0.95\textwidth]{figure7_pathway_enrichment.png}
 \caption{\textbf{Functional Biological Pathway Enrichment.} Hypergeometric enrichment analysis of the stability-selected consensus signature against canonical breast cancer signaling and molecular ontology modules.}
 \label{fig:pathway}
 \end{figure}
 
-The signature displayed extraordinary enrichment for canonical Estrogen Receptor Signaling ( = 8.03 \times 10^{-11}$, odds ratio 37.67) and the FOXA1-GATA3 Transcriptional Coregulatory Network ( = 1.02 \times 10^{-4}$). In contrast, non-specific cell cycle proliferation (e.g., \textit{MKI67}, \textit{CCND1}) and apoptotic survival modules showed zero overlap ( = 1.00$). Querying the Enrichr database across Gene Ontology and KEGG libraries yielded 2,158 significantly enriched terms ( < 0.05$). This confirms that the model captures genuine estrogen-dependent transcriptional identity rather than secondary cell proliferation artifacts.
+The signature displayed extraordinary enrichment for canonical Estrogen Receptor Signaling ( = 8.03 \times 10^{-11}$, odds ratio 37.67) and the FOXA1-GATA3 Transcriptional Coregulatory Network ( = 1.02 \times 10^{-4}$). In contrast, non-specific cell cycle proliferation (e.g., \textit{MKI67}, \textit{CCND1}) and apoptotic survival modules showed zero overlap ( = 1.00$). Querying the Enrichr database across Gene Ontology and KEGG libraries yielded 2{,}158 significantly enriched terms ( < 0.05$). This confirms that the model captures genuine estrogen-dependent transcriptional identity rather than secondary cell proliferation artifacts.
 
 
 \subsection{Downstream Redundancy: ESR1-Exclusion Preserves Diagnostic Power}
@@ -325,7 +378,7 @@ To rigorously test whether SS-MLP had truly internalized the broader regulatory 
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.95\textwidth]{figures/figure8_ablation_redundancy_capacity.png}
+\includegraphics[width=0.95\textwidth]{figure8_ablation_redundancy_capacity.png}
 \caption{\textbf{Architectural Ablation Experiments & Transcriptomic Diagnostic Redundancy.} (A) Complete downstream diagnostic fidelity under in silico knockout of \textit{ESR1}. (B) Feature capacity saturation curves across 50, 100, 200, and 300 stability genes. (C) Dropout regularization ablations balancing overconfidence and calibration slope.}
 \label{fig:ablation}
 \end{figure}
@@ -341,7 +394,7 @@ Translating machine-learning models to clinical pathology requires transparent o
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.95\textwidth]{figures/figure9_clinical_triage_decision_matrix.png}
+\includegraphics[width=0.95\textwidth]{figure9_clinical_triage_decision_matrix.png}
 \caption{\textbf{Clinical Decision-Support Triage & Confidence Abstention Framework.} (A) Coverage-risk operating tradeoff on SCAN-B (=3,073$). (B) Autonomous clinical triage flow waterfall. (C) Stepwise reduction in absolute diagnostic errors across abstention tiers.}
 \label{fig:triage}
 \end{figure}
@@ -372,58 +425,6 @@ Several limitations should be noted. First, all three cohorts were collected ret
 \section{Conclusions}
 
 Transcriptomic profiling offers an objective, reproducible diagnostic adjunct to visual immunohistochemistry in breast cancer. By integrating repeated Elastic-Net stability selection with deep neural network regularization, label-free rank normalization, and selective abstention, the RAPID-ER framework resolves the discrimination-calibration paradox, providing an open, platform-resilient foundation for automated genomic decision support.
-
-\section{Materials and Methods}
-
-\subsection{Cohort Acquisition, Quality Audit, and Exclusion Criteria}
-All genomic and clinical records were acquired from public repositories:
-\begin{enumerate}
-    \item \textbf{TCGA-BRCA ($N = 1,044$):} Raw STAR-derived gene counts and clinical biospecimen manifests were acquired via the NCI GDC API (release 32.0). Auditing identified 1,111 biospecimens. We excluded 16 duplicate technical vials (`01B`) to prevent patient overlap and 51 records with unrecorded or indeterminate clinical ER IHC status, leaving 1,044 unique primary tumours.
-    \item \textbf{SCAN-B / GSE96058 ($N = 3,073$):} $\log_2(\text{FPKM} + 0.1)$ expression profiles and clinical manifests across 3,409 runs were obtained from NCBI GEO. Auditing excluded 136 technical replicate profiles and 200 patients missing recorded IHC status, yielding 3,073 eligible unique patients.
-    \item \textbf{GSE42568 ($N = 101$):} Affymetrix Human Genome U133 Plus 2.0 array profiles ($\log_2$ GC-RMA scale) were obtained from GEO. From 121 hybridizations, 17 reduction mammoplasty non-tumour controls and 3 indeterminate samples were excluded, leaving 101 primary breast carcinomas.
-\end{enumerate}
-
-\subsection{Gene Mapping and Shared Feature Space}
-Ensembl IDs (TCGA) were converted via GENCODE v36. SCAN-B gene symbols were harmonized against HGNC approved aliases. Affymetrix probe sets were mapped using the Jetset scoring algorithm. The intersection across all three cohorts yielded a universal feature space of \textbf{17,367 HGNC symbols}.
-
-\subsection{Leakage Prevention and Cross-Validation Protocol}
-All data transformations, variance filtering, stability selection frequencies, and neural network weights were fitted exclusively on designated training partitions. For TCGA-BRCA, 5-fold stratified cross-validation was implemented at the unique patient level. External cohorts (GSE96058, GSE42568) were fully isolated and evaluated only after all training parameters were frozen.
-
-\subsection{Preprocessing and Transfer Regimes}
-Within each training partition, unexpressed genes were filtered by retaining features exhibiting $\ge 10$ raw counts in $\ge 20\%$ of training samples, filtering $\sim 2,160$ low-expression noise features and retaining $\sim 15,200$ active genes. Read counts were normalized to $\log_2(\text{CPM} + 1)$.
-\begin{itemize}
-    \item \textbf{Transfer Strategy A (Frozen Standardization):} Feature-wise mean $\mu_{\text{train}}$ and standard deviation $\sigma_{\text{train}}$ were calculated on training partitions and applied unchanged to external cohorts:
-    \begin{equation}
-    \tilde{x}_{ij} = \frac{x_{ij} - \mu_{j,\text{train}}}{\sigma_{j,\text{train}} + \epsilon}
-    \end{equation}
-    \item \textbf{Transfer Strategy B (Within-Sample Rank Normalization):} Across the 17,367 common genes within each sample independently, expression values were converted to relative fractional ranks in $[0, 1]$:
-    \begin{equation}
-    \tilde{x}_{ij} = \frac{\text{Rank}(x_{ij}) - 1}{P - 1}
-    \end{equation}
-\end{itemize}
-
-\paragraph{Methodological Consistency of Transfer Strategy B:}
-To ensure absolute methodological rigor and prevent cross-distribution artifacts, the Strategy B model evaluated in Table~\ref{tab:table3} was trained \textit{directly} on within-sample fractional rank-transformed TCGA-BRCA training partitions ($[0, 1]$ rank domain), rather than post-hoc evaluation of a model trained on parametric $Z$-scores. Training directly on relative ranks ensures that the neural network learns weight representations natively aligned with the invariant ordinal rank domain, eliminating the catastrophic scale collapse observed under frozen parametric standardization.
-
-\subsection{Repeated Elastic-Net Stability Selection}
-Within each training fold, we executed repeated Elastic-Net subsampling across $B = 100$ bootstrap draws (subsampling fraction $\alpha = 0.8$). In each resample, an Elastic-Net logistic model ($\ell_1\text{-ratio} = 0.5$, penalization parameter $\lambda$ chosen via inner 5-fold cross-validation) was fitted. Feature selection frequencies $\hat{\Pi}_k = \frac{1}{B} \sum_{b=1}^B \mathbb{I}\{\hat{\beta}_k^{(b)} \ne 0\}$ were computed. Genes satisfying $\hat{\Pi}_k \ge \pi_{\text{threshold}} = 0.70$ were selected, yielding a stable consensus signature of 300 genes.
-
-\subsection{SS-MLP Architecture and Training}
-The proposed Stability-Selected Multilayer Perceptron (SS-MLP) comprises:
-\begin{itemize}
-    \item Input dimension: $d = 300$ stability-selected genes.
-    \item Hidden Layer 1: Linear($300 \to 256$), Gaussian Error Linear Unit (GELU) activation, Dropout ($p = 0.35$).
-    \item Hidden Layer 2: Linear($256 \to 64$), GELU activation, Dropout ($p = 0.25$).
-    \item Output Layer: Linear($64 \to 1$), Sigmoid activation producing posterior probability $\hat{p} \in [0, 1]$.
-\end{itemize}
-The network was trained using the AdamW optimizer (learning rate $\eta = 5 \times 10^{-4}$, weight decay $\lambda_{\text{reg}} = 10^{-3}$) under class-weighted binary cross-entropy loss with early stopping (patience $= 12$ epochs).
-
-\subsection{Evaluation Metrics and Uncertainty Quantification}
-Model discrimination was assessed using AUROC and AUPRC with 95\% DeLong and bootstrap confidence intervals. Probability calibration was evaluated via the Brier score and its three-component Sanders/Murphy decomposition:
-\begin{equation}
-\text{Brier} = \text{Reliability} - \text{Resolution} + \text{Uncertainty}
-\end{equation}
-Expected Calibration Error (ECE) was computed across 10 equal-width bins. Logistic calibration slope and intercept were fitted via logit regression: $\text{logit}(y) = a + b \cdot \text{logit}(\hat{p})$. For selective classification with abstention, a confidence threshold $\tau \in [0.5, 0.99]$ was established: samples with $\max(\hat{p}, 1-\hat{p}) \ge \tau$ were autonomously classified; otherwise, they were referred for confirmatory IHC review.
 
 \subsection*{Declarations}
 
