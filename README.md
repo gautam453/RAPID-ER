@@ -45,7 +45,7 @@ All datasets used in this study are publicly available de-identified records[cit
 ```bibtex
 @article{ramchander2026rapider,
   title   = {Decoupling Discrimination from Calibration: A Platform-Resilient, Uncertainty-Aware Transcriptomic Biomarker for Estrogen Receptor Phenotyping in Breast Cancer},
-  author  = {Ramchander, Gautam Kunniyur},
+  author  = {Gautam Kunniyur Ramchanderer},
   year    = {2026},
   note    = {Independent Bioinformatics Research Laboratory. Code: [https://github.com/gautam453/RAPID-ER](https://github.com/gautam453/RAPID-ER)}
 }
