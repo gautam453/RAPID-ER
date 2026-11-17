@@ -2,7 +2,7 @@
 
 ## Cross-Cohort and Cross-Platform Evaluation of Stable, Calibrated Gene-Expression Signatures for Estrogen Receptor Status Prediction in Breast Cancer
 
-**Authors:** Kunniyur Ramchander Gautam et al.  
+**Authors:** Gautam Kunniyur Ramchander et al.  
 **Affiliation:** Independent Bioinformatics Research Laboratory  
 **Corresponding Contact:** research@rapid-er.bio  
 **Date:** November 2026  
